@@ -9,14 +9,16 @@ import { MapsComponent } from '../../maps/maps.component';
 import { NotificationsComponent } from '../../notifications/notifications.component';
 import { UpgradeComponent } from '../../upgrade/upgrade.component';
 import {CreateTripComponent} from '../../create-trip/create-trip.component';
+// import {CreateTripComponent} from '../../create-trip/create-trip.component';
 
 export const AdminLayoutRoutes: Routes = [
+    {
+      path: 'create-trip',
+      children: [ {
+        path: '',
+        component: CreateTripComponent
+    }]},
     // {
-    //   path: '',
-    //   children: [ {
-    //     path: 'dashboard',
-    //     component: DashboardComponent
-    // }]}, {
     // path: '',
     // children: [ {
     //   path: 'userprofile',
@@ -53,7 +55,7 @@ export const AdminLayoutRoutes: Routes = [
     //         component: UpgradeComponent
     //     }]
     // }
-    { path: 'create-trip',      component: CreateTripComponent },
+    // { path: 'create-trip',      component: CreateTripComponent },
     { path: 'dashboard',      component: DashboardComponent },
     { path: 'user-profile',   component: UserProfileComponent },
     { path: 'table-list',     component: TableListComponent },

@@ -1,0 +1,24 @@
+import { NgModule } from '@angular/core';
+import { CommonModule } from '@angular/common';
+import {TripStepsComponent} from './trip-steps/trip-steps.component';
+import {CreateTripComponent} from './create-trip.component';
+import { MatStepperModule } from '@angular/material/stepper';
+import { LocationDurationStepComponent } from './trip-steps/location-duration-step/location-duration-step.component';
+import { TripStyleStepComponent } from './trip-steps/trip-style-step/trip-style-step.component';
+import { AdvancedPreferencesStepComponent } from './trip-steps/advanced-preferences-step/advanced-preferences-step.component';
+
+
+@NgModule({
+  declarations: [
+    CreateTripComponent,
+    TripStepsComponent,
+    LocationDurationStepComponent,
+    TripStyleStepComponent,
+    AdvancedPreferencesStepComponent,
+  ],
+  imports: [
+    CommonModule,
+    MatStepperModule
+  ]
+})
+export class CreateTripModule { }

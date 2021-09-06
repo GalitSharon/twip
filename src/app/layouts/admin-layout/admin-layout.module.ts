@@ -17,7 +17,7 @@ import {MatRippleModule} from '@angular/material/core';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatSelectModule} from '@angular/material/select';
-import {CreateTripComponent} from '../../create-trip/create-trip.component';
+import {CreateTripModule} from '../../create-trip/create-trip.module';
 
 @NgModule({
   imports: [
@@ -31,6 +31,7 @@ import {CreateTripComponent} from '../../create-trip/create-trip.component';
     MatInputModule,
     MatSelectModule,
     MatTooltipModule,
+    CreateTripModule
   ],
   declarations: [
     DashboardComponent,
@@ -41,7 +42,6 @@ import {CreateTripComponent} from '../../create-trip/create-trip.component';
     MapsComponent,
     NotificationsComponent,
     UpgradeComponent,
-    CreateTripComponent
   ]
 })
 
