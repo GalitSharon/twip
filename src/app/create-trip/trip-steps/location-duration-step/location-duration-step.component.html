@@ -1,1 +1,30 @@
-<p>location-duration-step works!</p>
+<form #f="ngForm" [formGroup]="form" (submit)="onSubmit()">
+    <div class="form-container">
+
+
+        <label>
+            Country
+            <input formControlName="country"/>
+<!--            <mat-select-country appearance="outline" formControlName="country"-->
+<!--                                label="Country"-->
+<!--                                [countries]="predefinedCountries"-->
+<!--                                (onCountrySelected)="onCountrySelected($event)">-->
+<!--            </mat-select-country>-->
+        </label>
+        <label>
+            City
+            <input formControlName="city"/>
+        </label>
+        <label>
+            Address
+            <input formControlName="address"/>
+        </label>
+        <label>
+            Duration
+            <input formControlName="duration"/>
+        </label>
+    </div>
+
+    <button type="submit" class="btn btn-danger">Next</button>
+
+</form>

@@ -1,0 +1,64 @@
+.form-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.form-check-label {
+    display: flex;
+    flex-direction: column;
+    width: 24%;
+}
+
+
+
+.attractions-title {
+    margin: 50px 0 0;
+}
+
+.form-group {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+.checkbox-container {
+    display: flex;
+    justify-content: center;
+    height: max-content;
+}
+
+.items-collection{
+    margin:20px 0 0 0;
+}
+
+.items-collection label.btn-default{
+    width:90%;
+    border:1px solid #305891;
+    margin:5px;
+    border-radius: 17px;
+    color: #305891;
+}
+
+.items-collection label .itemcontent{
+    width:100%;
+}
+.items-collection .btn-group{
+    width:90%
+}
+
+.checkbox {
+    display: none;
+}
+
+.attraction-selected,  .attraction-selected:hover{
+    background: #f3bb45;
+    border: none;
+}
+
+.attraction-not-selected,  .attraction-not-selected:hover{
+    background: white;
+    border: none;
+}
+
+.buttons-wrapper {
+    margin-top: 80px;
+}

@@ -23,27 +23,20 @@
                 </div>
             </div>
         </div>
+
         <div class="bs-stepper-content">
             <form>
                 <div id="test-l-1" class="content">
-                    <div class="form-group">
-                        <label for="exampleInputEmail1">Email address</label>
-                        <input type="email" class="form-control" id="exampleInputEmail1" placeholder="Enter email" />
-                    </div>
-
-                    <button (click)="next()" class="btn btn-primary">Next</button>
+                    <app-location-duration-step (next)="nextToStep2($event)" ></app-location-duration-step>
                 </div>
                 <div id="test-l-2" class="content">
-                    <div class="form-group">
-                        <label for="exampleInputPassword1">Password</label>
-                        <input type="password" class="form-control" id="exampleInputPassword1" placeholder="Password" />
-                    </div>
-                    <button (click)="next()" class="btn btn-primary">Next</button>
+                    <app-trip-style-step (prev)="prev()" (next)="nextToStep3($event)"></app-trip-style-step>
                 </div>
                 <div id="test-l-3" class="content text-center">
-                    <button type="submit" class="btn btn-primary mt-5">Submit</button>
+                    <app-advanced-preferences-step (prev)="prev()" (next)="nextToCreateTrip($event)"></app-advanced-preferences-step>
                 </div>
             </form>
         </div>
+
     </div>
 </div>

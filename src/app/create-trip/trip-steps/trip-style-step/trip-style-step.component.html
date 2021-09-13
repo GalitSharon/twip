@@ -1,1 +1,75 @@
-<p>trip-style-step works!</p>
+<form #f="ngForm" [formGroup]="form" (submit)="onSubmit()">
+
+    <h5>Select Trip Rate</h5>
+    <div class="form-container">
+        <div class="form-check form-check-radio">
+            <label class="form-check-label">
+                <input class="form-check-input" type="radio" [value]="1" formControlName="tripRate">
+                Chill (1-3 attractions a day)
+                <span class="circle">
+                    <span class="check"></span>
+                </span>
+            </label>
+        </div>
+        <div class="form-check form-check-radio">
+            <label class="form-check-label">
+                <input class="form-check-input" type="radio" [value]="2" formControlName="tripRate">
+                The average tourist (3-6 attractions a day)
+                <span class="circle">
+                    <span class="check"></span>
+                </span>
+            </label>
+        </div>
+
+        <div class="form-check form-check-radio disabled">
+            <label class="form-check-label">
+                <input class="form-check-input" type="radio" [value]="3" formControlName="tripRate">
+                Fast & Furious (6 or more attractions a day)
+                <span class="circle">
+                    <span class="check"></span>
+                </span>
+            </label>
+        </div>
+    </div>
+
+
+    <div>
+        <h5 class="attractions-title">Select Attractions</h5>
+        <div class="row">
+            <div class="form-group">
+                <div class="items-collection" *ngFor="let attraction of attractions; let i=index">
+                    <div class="checkbox-container">
+                        <label class="btn btn-default label-button"
+                               [ngClass]="selectedAttractions.includes(attraction.value) ? 'attraction-selected' : 'attraction-not-selected'">
+                            <input type="checkbox" [value]="attraction.value" (change)="onCheckboxChange($event)"
+                                   class="checkbox"/>
+                            <div class="fa fa-car fa-2x"></div>
+                            <h6>{{attraction.desc}}</h6>
+                        </label>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="buttons-wrapper">
+        <button type="submit" class="btn btn-danger">Next</button>
+        <button type="button" class="btn btn-primary" (click)="prev.emit()">Back</button>
+    </div>
+
+</form>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
