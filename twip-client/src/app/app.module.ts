@@ -10,10 +10,13 @@ import {AgmCoreModule} from '@agm/core';
 import {AdminLayoutComponent} from './layouts/admin-layout/admin-layout.component';
 import {CountriesDropdownComponent} from './utils/countries-dropdown/countries-dropdown.component';
 import {MatSelectCountryModule} from '@angular-material-extensions/select-country';
+import { BrowserModule } from '@angular/platform-browser';
+
 
 @NgModule({
   imports: [
     BrowserAnimationsModule,
+    BrowserModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
@@ -24,7 +27,6 @@ import {MatSelectCountryModule} from '@angular-material-extensions/select-countr
       apiKey: 'YOUR_GOOGLE_MAPS_API_KEY'
     }),
     MatSelectCountryModule.forRoot('en'), // you can use// 'br' | 'de' | 'en' | 'es' | 'fr' | 'hr' | 'it' | 'nl' | 'pt'
-    HttpClientModule,
   ],
   declarations: [
     AppComponent,

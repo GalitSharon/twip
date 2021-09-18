@@ -40,7 +40,7 @@
                 <div class="items-collection" *ngFor="let attraction of attractions; let i=index">
                     <div class="checkbox-container">
                         <label class="btn btn-default label-button"
-                               [ngClass]="selectedAttractions.includes(attraction.value) ? 'attraction-selected' : 'attraction-not-selected'">
+                               [ngClass]="attractionsTypes.includes(attraction.value) ? 'attraction-selected' : 'attraction-not-selected'">
                             <input type="checkbox" [value]="attraction.value" (change)="onCheckboxChange($event)"
                                    class="checkbox"/>
                             <div class="fa fa-car fa-2x"></div>

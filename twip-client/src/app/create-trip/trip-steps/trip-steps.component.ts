@@ -30,7 +30,6 @@ export class TripStepsComponent implements AfterContentChecked {
   }
 
   nextToCreateTrip(userPreferences) {
-    console.log('TripStepsComponent submit');
     this.updateAdvancedPreferences(userPreferences.controls);
     this.activeStep = ++this.activeStep;
     this.submitUserSelections.emit(this.userPreferences);
@@ -59,7 +58,7 @@ export class TripStepsComponent implements AfterContentChecked {
 
   updateTripStyle(userSelections) {
     this.userPreferences.tripRate =  userSelections.tripRate.value;
-    this.userPreferences.selectedAttractions = userSelections.selectedAttractions.value.map(attractionValue => {
+    this.userPreferences.attractionsTypes = userSelections.attractionsTypes.value.map(attractionValue => {
       const attValue = Number(attractionValue);
       const attDesc = attractionsList.find(att => att.value === attValue);
       return {value: attValue, desc: attDesc}

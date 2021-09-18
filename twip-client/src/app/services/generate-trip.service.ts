@@ -1,17 +1,21 @@
-import { Injectable } from '@angular/core';
+import {Injectable} from '@angular/core';
+import {HttpClient} from '@angular/common/http';
+import {UserPreferences} from '../create-trip/trip-steps/user-preferences';
+import {TripSuggestionsData} from '../create-trip/trip-suggestions-data';
+import {Observable} from 'rxjs';
 
-const userTripPreferences = {
 
-}
-
-const generateTripRequest = {
-
-}
+const serverUrl = 'http://localhost:3000/trip'
 
 @Injectable({
-  providedIn: 'root'
+    providedIn: 'root'
 })
 export class GenerateTripService {
 
-  constructor() { }
+    constructor(private http: HttpClient) {
+    }
+
+    createTrip(tripPreferences: UserPreferences): Observable<TripSuggestionsData> {
+        return this.http.post<TripSuggestionsData>(serverUrl, tripPreferences);
+    }
 }

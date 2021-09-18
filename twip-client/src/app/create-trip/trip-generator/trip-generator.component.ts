@@ -1,5 +1,7 @@
 import {Component, Input, OnInit} from '@angular/core';
 import {UserPreferences} from '../trip-steps/user-preferences';
+import {TripSuggestionsData} from '../trip-suggestions-data';
+import {Trip} from '../trip';
 
 @Component({
   selector: 'app-trip-generator',
@@ -8,10 +10,18 @@ import {UserPreferences} from '../trip-steps/user-preferences';
 })
 export class TripGeneratorComponent implements OnInit {
   @Input() userPreferences: UserPreferences;
+  @Input() tripSuggestionsData: TripSuggestionsData;
+  suggestedTrip: Trip;
 
   constructor() { }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    this.generateRandomTrip();
   }
+
+  generateRandomTrip() {
+
+  }
+
 
 }

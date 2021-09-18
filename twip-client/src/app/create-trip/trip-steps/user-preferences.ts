@@ -1,13 +1,13 @@
-import {Attraction} from './attraction';
+import {AttractionType} from './attraction';
 import {TripRate} from './trip-rate';
 import {RestaurantType} from './restaurantType';
 
 export class UserPreferences {
     country: any; // TODO change type to Country, City, Address
     city: any;
-    address: any;
+    address: string;
     duration: number;
     tripRate: TripRate;
-    selectedAttractions: Attraction[];
+    attractionsTypes: AttractionType[];
     restaurantsTypes: RestaurantType[];
 }

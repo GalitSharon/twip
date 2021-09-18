@@ -1,6 +1,6 @@
-import {Attraction} from './attraction';
+import {AttractionType} from './attraction';
 
-export const attractionsList: Attraction[] = [
+export const attractionsList: AttractionType[] = [
     {value: 1, desc: 'Tour'},
     {value: 2, desc: 'Museum'},
     {value: 3, desc: 'BikeRent'},

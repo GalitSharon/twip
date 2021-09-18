@@ -48,7 +48,6 @@ export class AdvancedPreferencesStepComponent implements OnInit {
 
   onSubmit(): void {
     if (this.form.valid) {
-      console.log('AdvancedPreferencesStepComponent submit');
       this.next.emit(this.form);
     }
   }
