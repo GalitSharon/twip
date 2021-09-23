@@ -1,1 +1,32 @@
-<p>trip-generator works!</p>
+<div class="days-buttons-wrapper">
+    <ng-container *ngFor="let day of [].constructor(userPreferences.duration); let i = index">
+        <div class="button-container">
+            <button [ngClass]="currentDayDisplayed === i + 1 ? 'day-button-active' : 'day-button'"
+                    (click)="updateCurrentDayDisplayed(i + 1)">day {{i + 1}}</button>
+            <div [ngClass]="currentDayDisplayed === i + 1 ? 'arrow-down' : ''"></div>
+        </div>
+    </ng-container>
+</div>
+
+<!--<div class="days-buttons-wrapper" *ngFor="userPreferences.duration; let i =index">-->
+<!--    <button>day {{i + 1}}</button>-->
+<!--</div>-->
+
+<!--<div *ngFor="let daySuggestion of tripSuggestionsData; let i = index">-->
+<!--    <div>day {{i + 1}}</div>-->
+
+<!--    <div class="calendar">-->
+<!--        <ng-container *ngFor="let restaurant of daySuggestion.restaurants; let i = index">-->
+<!--            <div>-->
+<!--                <div>{{i === 1 ? 'breakfast restaurant:' : i === 2 ? 'lunch restaurant' : 'dinner restaurant'}}</div>-->
+<!--                <div>{{restaurant.name}}</div>-->
+<!--                <div>{{restaurant.desc}}</div>-->
+<!--                <img *ngIf="restaurant.image" [src]="restaurant.image" alt=""/>-->
+<!--                <div *ngIf="restaurant.address">{{restaurant.address}}</div>-->
+<!--                <a *ngIf="restaurant.website">{{restaurant.website}}</a>-->
+<!--            </div>-->
+<!--        </ng-container>-->
+<!--    </div>-->
+
+
+<!--</div>-->

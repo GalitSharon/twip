@@ -3,6 +3,9 @@ import {UserPreferences} from './trip-steps/user-preferences';
 import {GenerateTripService} from '../services/generate-trip.service';
 import {TripSuggestionsData} from './trip-suggestions-data';
 import {Subscription} from 'rxjs/Subscription';
+import {tripSuggestion} from './mocks/trip-suggestion';
+import {userPreferencess} from './mocks/user-preferences';
+
 
 @Component({
   selector: 'app-create-trip',
@@ -13,28 +16,29 @@ import {Subscription} from 'rxjs/Subscription';
 export class CreateTripComponent implements  OnDestroy {
   isTripSteps = true;
   isGenerateTripStep = false;
-  userPreferences: UserPreferences;
-  tripSuggestionsData: TripSuggestionsData;
 
-
+  // userPreferences: UserPreferences;
+  userPreferences: UserPreferences = userPreferencess; // TODO delete
+  // tripSuggestionsData: TripSuggestionsData[] = [];
+  tripSuggestionsData: TripSuggestionsData[] = tripSuggestion; // TODO delete
   private subscriptions: Subscription;
 
   constructor(private generateTripService: GenerateTripService) {
   }
 
   submitUserSelections(userPreferences) {
-    console.log('generate!!')
     this.userPreferences = userPreferences;
     this.isTripSteps = false;
     this.isGenerateTripStep = true;
 
-    this.subscriptions.add(
-        this.generateTripService.createTrip(this.userPreferences)
-        .subscribe((tripSuggestionsData: TripSuggestionsData) => {
-          console.log('tripSuggestionsData:', tripSuggestionsData)
-          this.tripSuggestionsData = tripSuggestionsData;
-        })
-    )
+    // this.subscriptions.add( // TODO - remove comment
+    //     this.generateTripService.createTrip(this.userPreferences)
+    //     .subscribe((tripSuggestionsData: TripSuggestionsData[]) => {
+    //       console.log('tripSuggestionsData:', tripSuggestionsData)
+    //       this.tripSuggestionsData = tripSuggestionsData;
+    //     })
+    // )
+    this.tripSuggestionsData = tripSuggestion; // TODO delete
   }
 
   ngOnDestroy() {

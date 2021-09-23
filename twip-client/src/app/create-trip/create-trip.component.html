@@ -1,4 +1,5 @@
 <div class="main-content">
-    <app-trip-steps *ngIf="isTripSteps" (submitUserSelections)="submitUserSelections($event)"></app-trip-steps>
-    <app-trip-generator *ngIf="isGenerateTripStep" [userPreferences]="userPreferences" [tripSuggestionsData]="tripSuggestionsData"></app-trip-generator>
+<!--    <app-trip-steps *ngIf="isTripSteps" (submitUserSelections)="submitUserSelections($event)"></app-trip-steps>-->
+<!--    <app-trip-generator *ngIf="isGenerateTripStep" [userPreferences]="userPreferences" [tripSuggestionsData]="tripSuggestionsData"></app-trip-generator>-->
+    <app-trip-generator  [userPreferences]="userPreferences" [tripSuggestionsData]="tripSuggestionsData"></app-trip-generator>
 </div>

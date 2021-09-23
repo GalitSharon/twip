@@ -10,8 +10,9 @@ import {Trip} from '../trip';
 })
 export class TripGeneratorComponent implements OnInit {
   @Input() userPreferences: UserPreferences;
-  @Input() tripSuggestionsData: TripSuggestionsData;
+  @Input() tripSuggestionsData: TripSuggestionsData[];
   suggestedTrip: Trip;
+  currentDayDisplayed = 1;
 
   constructor() { }
 
@@ -23,5 +24,7 @@ export class TripGeneratorComponent implements OnInit {
 
   }
 
-
+  updateCurrentDayDisplayed(day) {
+    this.currentDayDisplayed = day;
+  }
 }

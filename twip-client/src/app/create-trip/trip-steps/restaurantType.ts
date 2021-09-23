@@ -1,5 +1,5 @@
 export interface RestaurantType {
     value: number;
-    desc: string;
+    desc?: string | object;
     icon?: any;
 }

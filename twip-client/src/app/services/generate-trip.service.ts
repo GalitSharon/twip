@@ -15,7 +15,7 @@ export class GenerateTripService {
     constructor(private http: HttpClient) {
     }
 
-    createTrip(tripPreferences: UserPreferences): Observable<TripSuggestionsData> {
-        return this.http.post<TripSuggestionsData>(serverUrl, tripPreferences);
+    createTrip(tripPreferences: UserPreferences): Observable<TripSuggestionsData[]> {
+        return this.http.post<TripSuggestionsData[]>(serverUrl, tripPreferences);
     }
 }

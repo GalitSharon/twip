@@ -1,0 +1,42 @@
+
+
+.days-buttons-wrapper {
+    display: flex;
+    width: max-content;
+    max-width: 100%;
+    padding: 20px 0;
+    overflow-x: auto;
+}
+
+.button-container {
+    width: 139px;
+    height: 69px;
+    display: flex;
+    margin-left: 30px;
+}
+
+.day-button , .day-button-active{
+    width: 100px;
+    border: none;
+    background: white;
+    border-radius: 7px;
+    height: 36px;
+
+    position: relative;
+    display: block;
+}
+
+.day-button-active {
+    background: #f3bb45;
+}
+
+.arrow-down {
+    width: 0;
+    height: 0;
+    border-left: 12px solid transparent;
+    border-right: 12px solid transparent;
+    border-top: 10px solid #f3bb45;
+    position: relative;
+    top: 34px;
+    right: 45%;
+}
